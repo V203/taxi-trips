@@ -8,8 +8,8 @@
   ],
   "before_script": [
     "psql -c 'create database  txidb;' -U postgres",
-    "psql -U postgres -d txidb -a -f tables.sql",
-    "psql -U postgres -d txidb -a -f data.sql"
+    "psql -U postgres -d txidb -a -f sql/tables.sql",
+    "psql -U postgres -d txidb -a -f sql/data.sql"
   ],
   "services": [
     "postgresql"
