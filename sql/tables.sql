@@ -1,8 +1,8 @@
--- drop table if exists region;
--- drop table if exists route;
--- drop table if exists taxi;
--- drop table if exists trip;
--- create table region(id serial primary key not null, name text not null);
+drop table if exists region;
+drop table if exists route;
+drop table if exists taxi;
+drop table if exists trip;
+create table region(id serial primary key not null, name text not null);
 create table route(
     id serial primary key,
     name text not null,
