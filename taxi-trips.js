@@ -31,7 +31,7 @@ module.exports = function TaxiTrips(pool){
     }
 
     let findTotalIncomePerTaxi = async ()=>{
-       let results =  await pool.query(`select  trip_reg_number,sum(fare_total) from trip group by trip_reg_number`);
+       let results =  await pool.query(`select  trip_reg_number,sum(fare_total) from trip group by trip_reg_number order by sum desc`);
        return results.rows
     }
 

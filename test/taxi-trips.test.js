@@ -104,18 +104,19 @@ describe('Taxi Trips', function () {
 
         const taxiTrips = TaxiTrips(pool);
         let actual = await taxiTrips.findTotalIncomePerTaxi()
-        let expected = [
-            { trip_reg_number: 'CY5555', sum: '651.00' },
-            { trip_reg_number: 'DZ1111', sum: '476.00' },
-            { trip_reg_number: 'CJ2222', sum: '686.00' },
-            { trip_reg_number: 'DH2222', sum: '595.00' },
-            { trip_reg_number: 'CA1111', sum: '763.00' },
+        let expected =[
             { trip_reg_number: 'ZN5555', sum: '784.00' },
+            { trip_reg_number: 'CA1111', sum: '763.00' },
+            { trip_reg_number: 'ZN2222', sum: '756.00' },
             { trip_reg_number: 'ZN1111', sum: '756.00' },
-            { trip_reg_number: 'DD5555', sum: '476.00' },
-            { trip_reg_number: 'ZN2222', sum: '756.00' }
-        ]
-        // console.log(actual);
+            { trip_reg_number: 'CJ2222', sum: '686.00' },
+            { trip_reg_number: 'CY5555', sum: '651.00' },
+            { trip_reg_number: 'DH2222', sum: '595.00' },
+            { trip_reg_number: 'DZ1111', sum: '476.00' },
+            { trip_reg_number: 'DD5555', sum: '476.00' }
+          ]
+          
+        console.log(actual);
 
         assert.deepStrictEqual(expected, actual);
 
