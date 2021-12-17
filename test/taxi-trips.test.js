@@ -117,8 +117,6 @@ describe('Taxi Trips', function () {
             { trip_reg_number: 'CA1111', sum: '763.00' }
           ]
           
-        console.log(actual);
-
         assert.deepStrictEqual(expected, actual);
 
     });
@@ -140,9 +138,6 @@ describe('Taxi Trips', function () {
         assert.deepStrictEqual(expected, actual);
 
     })
-
-    
-
 
     after(function () {
         pool.end();
